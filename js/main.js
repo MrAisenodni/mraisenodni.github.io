@@ -234,7 +234,7 @@
                     },
                     gmaps: {
                       index: '//maps.google.',
-                      src: '%id%&output=embed'
+                      src: '%id%&output=embed?pb=!1m18!1m12!1m3!1d3965.8613239637525!2d106.99413321413817!3d-6.281954763237997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e698de540689267%3A0xe6d28d035ffe49b7!2sJl.%20Lumbu%20Barat%20II-G%20No.5%2C%20RT.002%2FRW.010%2C%20Bojong%20Rawalumbu%2C%20Kec.%20Rawalumbu%2C%20Kota%20Bks%2C%20Jawa%20Barat%2017116!5e0!3m2!1sid!2sid!4v1619900603518!5m2!1sid!2sid'
                     }
                 },
 
