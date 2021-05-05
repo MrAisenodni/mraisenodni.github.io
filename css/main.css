@@ -935,6 +935,7 @@ body > footer .copyrights {
 
 .start-page-content .page-content .download-resume {
   margin-top: 15px;
+  margin-right: 10px;
 }
 
 .info-list {
@@ -1161,9 +1162,9 @@ body > footer .copyrights {
 }
 
 .service-block img {
-  max-width: 100px;
-  height: 64px;
-  margin: 28px 0;
+  max-width: 150px;
+  height: 92px;
+  margin: 15px 0;
 }
 
 .service-block h4 {
@@ -2513,7 +2514,7 @@ blockquote footer, blockquote small, blockquote .small {
 
   .start-page-content .page-header .title-block h1 {
     margin-top: 25px;
-    font-size: 44px;
+    font-size: 36px;
     line-height: 1.2em;
   }
 
@@ -2552,4 +2553,9 @@ blockquote footer, blockquote small, blockquote .small {
   .home-page-description {
     font-size: 16px;
   }
+}
+
+.row .block .download-resume a {
+  margin-top: 15px;
+  margin-right: 10px;
 }
