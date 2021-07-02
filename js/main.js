@@ -45,6 +45,38 @@
     }
     // /Portfolio subpage filters
 
+    // Sertifikat subpage filters
+    function sertifikat_init() {
+        var sertifikat_grid = $('#sertifikat_grid'),
+            sertifikat_filter = $('#sertifikat_filters');
+            
+        if (sertifikat_grid) {
+
+            sertifikat_grid.shuffle({
+                speed: 450,
+                itemSelector: 'figure'
+            });
+
+            $('.site-main-menu').on("click", "a", function (e) {
+                sertifikat_grid.shuffle('update');
+            });
+
+
+            sertifikat_filter.on("click", ".filter", function (e) {
+                sertifikat_grid.shuffle('update');
+                e.preventDefault();
+                $('#sertifikat_filters .filter').parent().removeClass('active');
+                $(this).parent().addClass('active');
+                sertifikat_grid.shuffle('shuffle', $(this).attr('data-group') );
+                setTimeout(function(){
+                    subpages_resize();
+                }, 500);
+            });
+
+        }
+    }
+    // /Sertifikat subpage filters
+    
     // Contact form validator
     $(function () {
 
@@ -120,6 +152,7 @@
     $(document).on('ready', function() {
         // Initialize Portfolio grid
         var $portfolio_container = $("#portfolio-grid");
+        var $sertifikat_container = $("#sertifiat-grid");
 
         $portfolio_container.imagesLoaded(function () {
             setTimeout(function(){
@@ -127,8 +160,17 @@
             }, 500);
         });
 
+        $sertifikat_container.imagesLoaded(function () {
+            setTimeout(function(){
+                sertifikat_init(this);
+            }, 500);
+        });
+
         // Portfolio hover effect init
         $(' #portfolio_grid > figure ').each( function() { $(this).hoverdir(); } );
+
+        // Sertifikat hover effect init
+        $(' #sertfikat_grid > figure ').each( function() { $(this).hoverdir(); } );
 
         // Blog grid init
         setTimeout(function(){

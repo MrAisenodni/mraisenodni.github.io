@@ -20,6 +20,7 @@
   7.4. Portfolio subpage
   7.5. Blog subpage
   7.6. Contact subpage
+  7.7. Sertifikat subpage
 8. Sliders (testimonials & portfolio carousels)
 9. Portfolio Full info page
 10. Single Page Layout (Blog Post page ...)
@@ -530,6 +531,10 @@ body > footer .copyrights {
 }
 
 .pt-page.pt-page-current .portfolio-grid {
+  display: block;
+}
+
+.pt-page.pt-page-current .sertifikat-grid {
   display: block;
 }
 
@@ -2559,3 +2564,141 @@ blockquote footer, blockquote small, blockquote .small {
   margin-top: 15px;
   margin-right: 10px;
 }
+
+/* =======================================
+7.7. Sertifikat subpage
+======================================= */
+.sertifikat-grid {
+  margin-left: -0.5em;
+  margin-right: -0.5em;
+}
+
+.sertifikat-grid figure {
+  width: 33.33333%;
+  float: left;
+  padding: 3px;
+}
+
+.sertifikat-grid img {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.sertifikat-filters {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2em;
+  text-align: center;
+}
+.sertifikat-filters li {
+  display: inline-block;
+}
+
+.sertifikat-filters li a,
+.sertifikat-filters li a:hover {
+  color: #9e9e9e;
+  text-decoration: none;
+}
+
+.sertifikat-filters li a:hover {
+  background-color: #eee;
+}
+
+.sertifikat-filters li.active a,
+.sertifikat-filters li.active a:hover {
+  background-color: #29B6F6;
+  color: #fff;
+}
+
+.sertifikat-grid figure {
+  float: left;
+  position: relative;
+}
+
+.sertifikat-grid figure a,
+.sertifikat-rid figure a img {
+  display: block;
+  position: relative;
+}
+
+.sertifikat-grid figure a {
+  position: relative;
+  display: block;
+  overflow: hidden;
+}
+
+.sertifikat-grid figure a div {
+  top: 0px;
+  left: -100%;
+  padding: 5px 20px;
+  position: absolute;
+  background: transparent;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  -webkit-transition: all 0.3s ease-in-out;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -ms-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.sertifikat-grid figure a div:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #29B6F6;
+  opacity: 0.8;
+  z-index: 0;
+}
+
+.sertifikat-grid figure:nth-child(even) a div:before {
+  background-color: #9e51f3;
+}
+
+.sertifikat-grid figure a:hover div {
+  left: 0px;
+}
+
+.sertifikat-grid figure a div h5 {
+  position: relative;
+  display: block;
+  font-size: 1rem;
+  margin: 10px 0;
+  color: #fff;
+  z-index: 2;
+}
+
+.sertifikat-grid figure a div small {
+  color: #fff;
+  position: absolute;
+  bottom: 10px;
+  left: 20px;
+}
+
+.sertifikat-grid figure a div i {
+  color: #fff;
+  position: absolute;
+  font-size: 18px;
+  bottom: 14px;
+  right: 20px;
+  margin: 0;
+}
+
+.sertifikat-grid figure a div span {
+  display: block;
+  padding: 10px 0;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: rgba(255,255,255,0.9);
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+  border-bottom: 1px solid rgba(255,255,255,0.5);
+  -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+  -moz-box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.1), 0 -10px 0 rgba(255,255,255,0.3);
+}
+/* End of Direction-Aware Hover Effect */
